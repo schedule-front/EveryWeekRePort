@@ -80,11 +80,13 @@
 
 ### web端原型
 
-<iframe src="https://free.modao.cc/app/6cd60f302a30c3d032772f10b80555602fc9fd0c/embed" width="1544" height="1128" allowTransparency="true" frameborder="0"></iframe>
+<embed src="https://free.modao.cc/app/6cd60f302a30c3d032772f10b80555602fc9fd0c/embed" width="1544" height="1128" allowTransparency="true" frameborder="0"></embed>
 
 ### app端原型
 
-<iframe src="https://free.modao.cc/app/nblmz4zia8k2iw45l4dvmwtewjw2s/embed" width="515" height="968" allowTransparency="true" frameborder="0"></iframe>
+
+<embed src="https://free.modao.cc/app/nblmz4zia8k2iw45l4dvmwtewjw2s/embed" width="515" height="968" allowTransparency="true" frameborder="0"></embed>
+
 
 ## 六、项目分工
 学号 | 姓名  | 分工
