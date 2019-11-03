@@ -74,7 +74,7 @@
 
 ## 四、数据流图
 
-![](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week1/picture/datastream.bmp)
+![](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week1/picture/datastream.png)
 
 ## 五、项目原型
 
