@@ -103,6 +103,7 @@ public class Association implements Serializable {
     private String name;
     private Map<String,String> duitesId;
     private List<String> members;
+    private List<String> announcements;
 }
 ```
 
@@ -113,6 +114,7 @@ public class Association implements Serializable {
 |name|String| ||
 |duitesId|Map<String,String>|||
 |members|List<String>||存取成员id|
+|announcements| List\<String\> |||
 
 ## Announcements
 
@@ -124,6 +126,7 @@ public class Announcements implements Serializable {
     private String date;
     private String content;
     private String title;
+    private List<String> announcements;
 }
 ```
 
