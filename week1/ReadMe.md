@@ -105,9 +105,8 @@
 ## 七、项目技术
 
 |模块|app|web|后端|
-|-|-|-|-|-|
-||webapp|vue|redis+springboot||
-
+|-|-|-|-|
+||webapp|vue|redis+springboot|
 
 # 前后端接口定义模块
 
