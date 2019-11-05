@@ -3,7 +3,6 @@
 <!-- TOC -->
 
 - [社团管理系统需求分析](#社团管理系统需求分析)
-- [亮点](#亮点)
     - [一、项目分工](#一项目分工)
     - [二、项目背景](#二项目背景)
     - [三、系统简介](#三系统简介)
@@ -14,7 +13,7 @@
         - [系统管理员（学校方）](#系统管理员学校方)
     - [五、数据流图](#五数据流图)
     - [六、项目原型](#六项目原型)
-    - [七、项目技术](#七项目技术)
+        - [app端原型](#app端原型)
 - [前后端接口定义模块](#前后端接口定义模块)
     - [基本说明](#基本说明)
     - [User/Admin](#useradmin)
@@ -35,21 +34,13 @@
 
 <!-- /TOC -->
 
-# 亮点
-
-1. 用github管理每周报告及项目文档 [EveryWeekRePort](https://github.com/schedule-front/EveryWeekRePort)
-2. 墨刀原型
-   1. [web端原型](https://free.modao.cc/app/6cd60f302a30c3d032772f10b80555602fc9fd0c/embed)
-    2. [app端原型](https://free.modao.cc/app/nblmz4zia8k2iw45l4dvmwtewjw2s/embed)
-   
-
 ## 一、项目分工
-|学号 | 姓名  | 分工|
-|---- |-------| -----|
-|31701079 | 沈臻阳 | 网页端前端|
-|31701068 | 曹隆翔 | 移动端前端|
-|31701069 | 陈凯隆 | 后端开发|
-|31701180 | 金旻儒 | 后端开发|
+学号 | 姓名  | 分工
+---- |-------| -----
+31701079 | 沈臻阳 | 网页端前端
+31701068 | 曹隆翔 | 移动端前端
+31701069 | 陈凯隆 | 后端开发
+31701180 | 金旻儒 | 后端开发
 
 ## 二、项目背景
 
@@ -97,16 +88,13 @@
 
 [web端原型](https://free.modao.cc/app/6cd60f302a30c3d032772f10b80555602fc9fd0c/embed)
 
-[app端原型](https://free.modao.cc/app/nblmz4zia8k2iw45l4dvmwtewjw2s/embed)
+
+### app端原型
 
 
 <embed src="https://free.modao.cc/app/nblmz4zia8k2iw45l4dvmwtewjw2s/embed" width="515" height="968" allowTransparency="true" frameborder="0"></embed>
 
-## 七、项目技术
 
-|模块|app|web|后端|
-|-|-|-|-|-|
-||webapp|vue|redis+springboot||
 
 
 # 前后端接口定义模块

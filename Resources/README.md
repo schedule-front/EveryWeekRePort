@@ -19,6 +19,12 @@
   - [Announcements](#announcements)
     - [java类](#java%e7%b1%bb-2)
     - [表结构](#%e8%a1%a8%e7%bb%93%e6%9e%84-2)
+  - [Activicty](#activicty)
+    - [java类](#java%e7%b1%bb-3)
+    - [表结构](#%e8%a1%a8%e7%bb%93%e6%9e%84-3)
+  - [Shows](#shows)
+    - [java类](#java%e7%b1%bb-4)
+    - [表结构](#%e8%a1%a8%e7%bb%93%e6%9e%84-4)
 
 <!-- /TOC -->
 
@@ -39,7 +45,7 @@ public class User implements Serializable {
     private String eMail;
     private String phone;
     private String type;
-//省略getter setter
+    //省略getter setter
 }
 
 ```
@@ -52,8 +58,7 @@ public class User implements Serializable {
 |password|String|^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$|强密码(必须包含大小写字母和数字的组合，可以使用特殊字符，长度在8-10之间)：|
 |name|String|||
 |eMail|string|^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$|考虑通过邮件通知|
-|phone|string| ^(13[0-9]\|14[5\|7]\|15[0\|1\|2\|3\|5\|6\|7\|8\|9]\|18[0\|1\|2\|3\|5\|6\|7\|8\|9])\d{8}$ |
-电话号码正则表达式（支持手机号码，3-4位区号，7-8位直播号码，1－4位分机号）|
+|phone|string| ^(13[0-9]\|14[5\|7]\|15[0\|1\|2\|3\|5\|6\|7\|8\|9]\|18[0\|1\|2\|3\|5\|6\|7\|8\|9])\d{8}$ |电话号码正则表达式（支持手机号码，3-4位区号，7-8位直播号码，1－4位分机号）|
 |QQ|string|[1-9][0-9]{4,}|腾讯QQ号： 腾讯QQ号从10000开始)|
 
 ### 注册
@@ -101,20 +106,24 @@ public class User implements Serializable {
 ```java
 public class Association implements Serializable {
     private String name;
-    private Map<String,String> duitesId;
-    private List<String> members;
-    private List<String> announcements;
+    private String id;
+    private Map<String,List<String> > duitesId;
+    private set<String> members;
+    private set<String> announcements;
+    private set<String> activicty;
+    priavat set<String> shows;
 }
 ```
 
 ### 表结构
 
-| 名字 | java类型 | 格式(正则表达式) |说明|
-| ---- | ---- | ---|-|
-|name|String| ||
-|duitesId|Map<String,String>|||
-|members|List<String>||存取成员id|
+| 名字 | java类型 | 格式(正则表达式) |说明|后端处理|
+| ---- | ---- | ---|-|-|
+|name|String| |||
+|duitesId|Map<String,String>||||
+|members|List<String>||存取用户id|根据用户id，判断是否是该社团成员|
 |announcements| List\<String\> |||
+||||||
 
 ## Announcements
 
@@ -125,8 +134,60 @@ public class Announcements implements Serializable {
     private String id;
     private String date;
     private String content;
+    private String activictyId;
     private String title;
-    private List<String> announcements;
+    private String owner_id;
+    private String scale;
+}
+```
+
+### 表结构
+
+| 名字 | java类型 | 格式(正则表达式) |说明|
+| ---- | ---- | ---|-|
+|id|String| ||
+|date|String|||
+|content|String||内容|
+|title|String|||
+
+
+## Activicty
+
+### java类
+
+```java
+public class Activicty implements Serializable {
+    private String id;
+    private String date;
+    private String content;
+    private String activictyId;
+    private String title;
+    private String owner_id;
+    private String scale;
+}
+```
+
+### 表结构
+
+| 名字 | java类型 | 格式(正则表达式) |说明|
+| ---- | ---- | ---|-|
+|id|String| ||
+|date|String|||
+|content|String||内容|
+|title|String|||
+
+## Shows
+
+### java类
+
+```java
+public class Shows implements Serializable {
+    private String id;
+    private String date;
+    private String content;
+    private String title;
+    private String owner_id;
+     private String scale;
 }
 ```
 
