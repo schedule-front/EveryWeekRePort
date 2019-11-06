@@ -1,32 +1,5 @@
 # 前后端接口定义模块
 
-<!-- TOC -->
-
-- [前后端接口定义模块](#%e5%89%8d%e5%90%8e%e7%ab%af%e6%8e%a5%e5%8f%a3%e5%ae%9a%e4%b9%89%e6%a8%a1%e5%9d%97)
-  - [基本说明](#%e5%9f%ba%e6%9c%ac%e8%af%b4%e6%98%8e)
-  - [User/Admin](#useradmin)
-    - [java类](#java%e7%b1%bb)
-    - [表结构](#%e8%a1%a8%e7%bb%93%e6%9e%84)
-    - [注册](#%e6%b3%a8%e5%86%8c)
-      - [请求](#%e8%af%b7%e6%b1%82)
-      - [JSON格式](#json%e6%a0%bc%e5%bc%8f)
-    - [登陆](#%e7%99%bb%e9%99%86)
-      - [请求](#%e8%af%b7%e6%b1%82-1)
-    - [找回密码](#%e6%89%be%e5%9b%9e%e5%af%86%e7%a0%81)
-  - [Association](#association)
-    - [java类](#java%e7%b1%bb-1)
-    - [表结构](#%e8%a1%a8%e7%bb%93%e6%9e%84-1)
-  - [Announcements](#announcements)
-    - [java类](#java%e7%b1%bb-2)
-    - [表结构](#%e8%a1%a8%e7%bb%93%e6%9e%84-2)
-  - [Activicty](#activicty)
-    - [java类](#java%e7%b1%bb-3)
-    - [表结构](#%e8%a1%a8%e7%bb%93%e6%9e%84-3)
-  - [Shows](#shows)
-    - [java类](#java%e7%b1%bb-4)
-    - [表结构](#%e8%a1%a8%e7%bb%93%e6%9e%84-4)
-
-<!-- /TOC -->
 
 ## 基本说明
 
@@ -106,24 +79,20 @@ public class User implements Serializable {
 ```java
 public class Association implements Serializable {
     private String name;
-    private String id;
-    private Map<String,List<String> > duitesId;
-    private set<String> members;
-    private set<String> announcements;
-    private set<String> activicty;
-    priavat set<String> shows;
+    private Map<String,String> duitesId;
+    private List<String> members;
+    private List<String> announcements;
 }
 ```
 
 ### 表结构
 
-| 名字 | java类型 | 格式(正则表达式) |说明|后端处理|
-| ---- | ---- | ---|-|-|
-|name|String| |||
-|duitesId|Map<String,String>||||
-|members|List<String>||存取用户id|根据用户id，判断是否是该社团成员|
+| 名字 | java类型 | 格式(正则表达式) |说明|
+| ---- | ---- | ---|-|
+|name|String| ||
+|duitesId|Map<String,String>|||
+|members|List<String>||存取成员id|
 |announcements| List\<String\> |||
-||||||
 
 ## Announcements
 
@@ -134,10 +103,8 @@ public class Announcements implements Serializable {
     private String id;
     private String date;
     private String content;
-    private String activictyId;
     private String title;
-    private String owner_id;
-    private String scale;
+    private List<String> announcements;
 }
 ```
 
@@ -151,52 +118,5 @@ public class Announcements implements Serializable {
 |title|String|||
 
 
-## Activicty
 
-### java类
-
-```java
-public class Activicty implements Serializable {
-    private String id;
-    private String date;
-    private String content;
-    private String activictyId;
-    private String title;
-    private String owner_id;
-    private String scale;
-}
-```
-
-### 表结构
-
-| 名字 | java类型 | 格式(正则表达式) |说明|
-| ---- | ---- | ---|-|
-|id|String| ||
-|date|String|||
-|content|String||内容|
-|title|String|||
-
-## Shows
-
-### java类
-
-```java
-public class Shows implements Serializable {
-    private String id;
-    private String date;
-    private String content;
-    private String title;
-    private String owner_id;
-     private String scale;
-}
-```
-
-### 表结构
-
-| 名字 | java类型 | 格式(正则表达式) |说明|
-| ---- | ---- | ---|-|
-|id|String| ||
-|date|String|||
-|content|String||内容|
-|title|String|||
 
