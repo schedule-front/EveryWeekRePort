@@ -32,12 +32,22 @@
 
 * 初步学习Mongodb
 * 学习了MongorRepository 实现了UserRepository的基本功能
-* 学习了Spirng service,通过接口控制了UserServiceImpl,实现了基本的增删改查，并提供了登陆验证的接口
-
+* 学习了Spirng service,通过接口控制了UserServiceImpl,实现了基本的增删改查
 
 ### 下周计划
 
 * 实现大部分类基本的增加删除操作
-* 多个不同collection的交cha
+* 多个不同collection的交叉
 
 
+## 转发相关
+
+### 周进度
+
+* 初步学习JWTToken验证机制
+* 基于Shiro、JWTToken方式提供了登陆验证的接口及路由
+
+### 下周计划
+
+* 实现已完成类的路由转发，并与前端进行交接测试
+* 提供mock数据
