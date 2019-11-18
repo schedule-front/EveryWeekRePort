@@ -4,6 +4,10 @@
 
 第一次例会报告： [例会报告](https://github.com/schedule-front/EveryWeekRePort/blob/master/%E4%BE%8B%E4%BC%9A/%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BE%8B%E4%BC%9A.md)
 
+阶段性总结一: [总结](https://github.com/schedule-front/EveryWeekRePort/blob/master/week2/weeksummary.md)
+
+文档预览(可能需要梯子): [GITBOOK](https://klchen.gitbook.io/everyweekreport/) 
+
 
 ## 用例图
 
@@ -88,3 +92,12 @@
 ## 类图
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/ClassPic.png)
+
+# 分工
+
+|学号 | 姓名  | 分工|
+|---- |-------| -----|
+|31701079 | 沈臻阳 | 文档编写|
+|31701068 | 曹隆翔 | 文档编写|
+|31701069 | 陈凯隆 | 时序图，用例图，文档编写|
+|31701180 | 金旻儒 | 用例图，类图|

@@ -24,6 +24,21 @@
 
 ## 手机网页端
 
+### 周进度
+
+* 初步学习了VUE前端框架结构，了解了VUE基础语法
+* 学会了利用VUE CIL搭建项目，了解了Node.js
+* 搭建了登录界面和注册界面的UI
+![](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week2/pic/caolx1.png)
+![](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week2/pic/caolx2.png)
+
+### 下周计划
+
+* 继续学习前端相关知识，熟悉各类工具及环境
+* 完成主界面UI的设计
+* 与后端进行接口连接测试
+
+
 # 后端
 
 ## 数据库相关
