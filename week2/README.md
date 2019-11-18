@@ -7,25 +7,25 @@
 
 ## 用例图
 
-学生：
+### 学生
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/C_Stu.png)
 
-社长：
+### 社长
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/C-pre.png)
 
-管理员：
+### 管理员
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/C_ad.png)
 
-用户：
+### 用户
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/C_User.png)
 
 ## 时序图
 
-### 学生：
+### 学生
 
 #### 申请参加活动
 
@@ -48,7 +48,7 @@
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/stu_ActivityInfo.png)
 
-### 社长：
+### 社长
 
 #### 申请活动
 
