@@ -33,6 +33,7 @@
 ```java
 public class User implements Serializable {
     private String id;
+    private String uid;
     private String password;
     private String nickName;
     private String name;
@@ -99,8 +100,10 @@ public class User implements Serializable {
 
 ```java
 public class Association implements Serializable {
+    private String id;
+    private String associationId;
     private String name;
-    private Map<String,String> duitesId;
+    private Map<String,List<String>> duitesId;
     private List<String> members;
     private List<String> announcements;
 }
@@ -120,12 +123,12 @@ public class Association implements Serializable {
 ### java类
 
 ```java
-public class Announcements implements Serializable {
+public class Announcement implements Serializable {
     private String id;
+    private String announcementId;
     private String date;
     private String content;
     private String title;
-    private List<String> announcements;
 }
 ```
 
