@@ -20,8 +20,7 @@
       - [批准参加活动](#%e6%89%b9%e5%87%86%e5%8f%82%e5%8a%a0%e6%b4%bb%e5%8a%a8)
     - [管理员：](#%e7%ae%a1%e7%90%86%e5%91%98)
       - [批准换届申请](#%e6%89%b9%e5%87%86%e6%8d%a2%e5%b1%8a%e7%94%b3%e8%af%b7)
-      - [申请活动](#%e7%94%b3%e8%af%b7%e6%b4%bb%e5%8a%a8-1)
-      - [批准活动](#%e6%89%b9%e5%87%86%e6%b4%bb%e5%8a%a8)
+      - [批准申请活动](#%e6%89%b9%e5%87%86%e7%94%b3%e8%af%b7%e6%b4%bb%e5%8a%a8)
   - [成员：](#%e6%88%90%e5%91%98)
       - [提交职位申请](#%e6%8f%90%e4%ba%a4%e8%81%8c%e4%bd%8d%e7%94%b3%e8%af%b7)
   - [类图](#%e7%b1%bb%e5%9b%be)
@@ -63,22 +62,32 @@
 
 #### 申请参加活动
 
+非社团成员需提交申请，等待社长审批才可参加活动
+
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/ApplyForActivities.png)
 
 #### 申请参加社团
+
+非社团成员需提交申请，等待社长审批才可参加社团
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/Stu_ApplyAssociation.png)
 
 
 #### 申请组成社团
 
+非社团成员需提交资质证明，可以向管理员提交社团组建申请
+
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/Stu_ApplyForFormAssociation.png)
 
 #### 查看社团信息
 
+社员及非社员，有不同权限查看，但管理员全体公告，所有学生均可查看
+
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/Stu_AssociationInfo.png)
 
 #### 查看活动信息
+
+学生登陆后即可在社团界面查看
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/stu_ActivityInfo.png)
 
@@ -86,13 +95,19 @@
 
 #### 申请活动
 
+社长向管理员申请活动
+
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/pre_ApplyActivity.png)
 
 #### 发布公告
 
+社长发布公告，可以选择是社员可见还是全体学生可见
+
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/pre_Notice.png)
 
 #### 批准参加活动
+
+社长具有批准非本社成员的参加活动请求权限
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/pre_ApproveApplyActivity.png)
 
@@ -100,21 +115,22 @@
 
 #### 批准换届申请
 
+管理员批准社长提交的换届申请
+
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/AffirmJobApplication.png)
 
-#### 申请活动
+#### 批准申请活动
+
+
+管理员批准社长提交的活动
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/Admin_ApproveApplicationForAssociation.png)
-
-
-#### 批准活动
-
-![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/admin_approveActivity.png)
-
 
 ## 成员：
 
 #### 提交职位申请
+
+所有社团人员都可以参与，但是只有社长能提交换届申请
 
 ![](https://github.com/schedule-front/EveryWeekRePort/raw/master/week2/pic/Member_JobApplication.png)
 
