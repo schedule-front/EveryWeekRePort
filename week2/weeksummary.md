@@ -1,6 +1,4 @@
 
-# 进度报告
-
 # 前端
 
 ## 网页端
@@ -24,6 +22,21 @@
 
 ## 手机网页端
 
+### 周进度
+
+* 初步学习了VUE前端框架结构，了解了VUE基础语法
+* 学会了利用VUE CIL搭建项目，了解了Node.js
+* 搭建了登录界面和注册界面的UI
+![](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week2/pic/caolx1.png)
+![](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week2/pic/caolx2.png)
+
+### 下周计划
+
+* 继续学习前端相关知识，熟悉各类工具及环境
+* 完成主界面UI的设计
+* 与后端进行接口连接测试
+
+
 # 后端
 
 ## 数据库相关
@@ -32,12 +45,28 @@
 
 * 初步学习Mongodb
 * 学习了MongorRepository 实现了UserRepository的基本功能
-* 学习了Spirng service,通过接口控制了UserServiceImpl,实现了基本的增删改查，并提供了登陆验证的接口
-
+* 学习了Spirng service,通过接口控制了UserServiceImpl,实现了基本的增删改查
 
 ### 下周计划
 
 * 实现大部分类基本的增加删除操作
-* 多个不同collection的交cha
+* 多个不同collection的交叉
 
 
+## 转发相关
+
+### 周进度
+
+* 初步学习JWTToken验证机制
+* 基于Shiro、JWTToken方式提供了登陆验证的接口及路由
+
+### 下周计划
+
+* 实现已完成类的路由转发，并与前端进行交接测试
+* 提供mock数据
+
+# 现阶段总结
+
+* 还未完成接口定义，进度较慢
+* 后端进度受前端影响，需要改善
+* 开始UI设计，争取先确定好数据接口
