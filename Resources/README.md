@@ -19,6 +19,10 @@
   - [Announcements](#announcements)
     - [java类](#java%e7%b1%bb-2)
     - [表结构](#%e8%a1%a8%e7%bb%93%e6%9e%84-2)
+  - [Activity](#activity)
+    - [java类](#java%e7%b1%bb-3)
+  - [Account](#account)
+    - [java类](#java%e7%b1%bb-4)
 
 <!-- /TOC -->
 
@@ -32,14 +36,29 @@
 
 ```java
 public class User implements Serializable {
-    private String id;
-    private String uid;
+    final public static String collectionName = "User";
+    @Id
+    String _id;
+    @Field
+    private String userId;
+    @Field
     private String password;
-    private String nickName;
+    @Field(value = "class")
+    private String clasS;
+    @Field
+    private String major;
+    @Field
     private String name;
+    @Field
     private String eMail;
+    @Field
     private String phone;
-    private String type;
+    @Field
+    private String role;
+    @Field
+    public List<String> announcements;
+    @Field
+    public List<String> associations;
     //省略getter setter
 }
 
@@ -47,14 +66,14 @@ public class User implements Serializable {
 
 ### 表结构
 
-| 名字 | java类型 | 格式(正则表达式) |说明|
-| ---- | ---- | ---|-|
-|uid|String| 317\d{5}||
-|password|String|^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$|强密码(必须包含大小写字母和数字的组合，可以使用特殊字符，长度在8-10之间)：|
-|name|String|||
-|eMail|string|^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$|考虑通过邮件通知|
-|phone|string| ^(13[0-9]\|14[5\|7]\|15[0\|1\|2\|3\|5\|6\|7\|8\|9]\|18[0\|1\|2\|3\|5\|6\|7\|8\|9])\d{8}$ |电话号码正则表达式（支持手机号码，3-4位区号，7-8位直播号码，1－4位分机号）|
-|QQ|string|[1-9][0-9]{4,}|腾讯QQ号： 腾讯QQ号从10000开始)|
+| 名字     | java类型 | 格式(正则表达式)                                                                         | 说明                                                                       |
+| -------- | -------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| uid      | String   | 317\d{5}                                                                                 |                                                                            |
+| password | String   | ^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$                                                  | 强密码(必须包含大小写字母和数字的组合，可以使用特殊字符，长度在8-10之间)： |
+| name     | String   |                                                                                          |                                                                            |
+| eMail    | string   | ^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$                                            | 考虑通过邮件通知                                                           |
+| phone    | string   | ^(13[0-9]\|14[5\|7]\|15[0\|1\|2\|3\|5\|6\|7\|8\|9]\|18[0\|1\|2\|3\|5\|6\|7\|8\|9])\d{8}$ | 电话号码正则表达式（支持手机号码，3-4位区号，7-8位直播号码，1－4位分机号） |
+| QQ       | string   | [1-9][0-9]{4,}                                                                           | 腾讯QQ号： 腾讯QQ号从10000开始)                                            |
 
 ### 注册
 
@@ -64,15 +83,15 @@ public class User implements Serializable {
 
 ####  JSON格式
 
-| 名字 |说明 |
-| ---- |-|
-|uid|判断是否重复|
-|password|加密传输|
-|name||
-|eMail||
-|phone||
-|QQ||
-|CAPTCHA||
+| 名字     | 说明         |
+| -------- | ------------ |
+| uid      | 判断是否重复 |
+| password | 加密传输     |
+| name     |              |
+| eMail    |              |
+| phone    |              |
+| QQ       |              |
+| CAPTCHA  |              |
 
 ### 登陆
 
@@ -80,18 +99,18 @@ public class User implements Serializable {
 
 /user/login
 
-| 名字 |说明 |
-| ---- |-|
-|uid|判断是否存在|
-|password|加密传输|
-|CAPTCHA||
+| 名字     | 说明         |
+| -------- | ------------ |
+| uid      | 判断是否存在 |
+| password | 加密传输     |
+| CAPTCHA  |              |
 
 ### 找回密码
 
-| 名字 |说明 |
-| ---- |-|
-|uid|判断是否存在|
-|eMail|提示部分,服务端校验是否一致,一致就向邮箱发送连接(待定)|
+| 名字  | 说明                                                   |
+| ----- | ------------------------------------------------------ |
+| uid   | 判断是否存在                                           |
+| eMail | 提示部分,服务端校验是否一致,一致就向邮箱发送连接(待定) |
 
 
 ## Association
@@ -100,23 +119,25 @@ public class User implements Serializable {
 
 ```java
 public class Association implements Serializable {
-    private String id;
+    private String _id;
     private String associationId;
     private String name;
-    private Map<String,List<String>> duitesId;
-    private List<String> members;
-    private List<String> announcements;
+    private Map<String,String> duitesId; // userId -> duityId
+    private Set<String> members;
+    private Set<String> announcements;
+    public Set<String> accounts;
+
 }
 ```
 
 ### 表结构
 
-| 名字 | java类型 | 格式(正则表达式) |说明|
-| ---- | ---- | ---|-|
-|name|String| ||
-|duitesId|Map<String,String>|||
-|members|List<String>||存取成员id|
-|announcements| List\<String\> |||
+| 名字          | java类型           | 格式(正则表达式) | 说明       |
+| ------------- | ------------------ | ---------------- | ---------- |
+| name          | String             |                  |            |
+| duitesId      | Map<String,String> |                  |            |
+| members       | List<String>       |                  | 存取成员id |
+| announcements | List\<String\>     |                  |            |
 
 ## Announcements
 
@@ -124,23 +145,92 @@ public class Association implements Serializable {
 
 ```java
 public class Announcement implements Serializable {
-    private String id;
+     @Id
+    private String _id;
+
+    @Field
     private String announcementId;
+
+    @Field
     private String date;
-    private String content;
+
+    @Field
+    private String excelUrl;
+
+    @Field
     private String title;
+
+    @Field
+    private String name;
+
+    @Field
+    private String sponsor;
+    
+    @Field
+    private String operator;
 }
 ```
 
+
 ### 表结构
 
-| 名字 | java类型 | 格式(正则表达式) |说明|
-| ---- | ---- | ---|-|
-|id|String| ||
-|date|String|||
-|content|String||内容|
-|title|String|||
+| 名字    | java类型 | 格式(正则表达式) | 说明 |
+| ------- | -------- | ---------------- | ---- |
+| id      | String   |                  |      |
+| date    | String   |                  |      |
+| content | String   |                  | 内容 |
+| title   | String   |                  |      |
 
+## Activity
 
+### java类
+
+```java
+@Document(collection="Activatity")
+public class Activity {
+    @Id
+    private String _id;
+
+    @Field
+    private String activityId;
+
+    @Field
+    private String title;
+
+    @Field
+    private String content;
+
+    @Field
+    private Date date;
+
+    @Field
+    private String associationId;
+}
+```
+
+## Account
+
+### java类
+
+``` java
+@Document("Account")
+public class Account {
+    @Id
+    private String _id;
+
+    @Field
+    private String accountId;
+
+    @Field
+    private String date;
+
+    @Field
+    private String title;
+
+    @Field
+    private String content;
+
+}
+```
 
 
