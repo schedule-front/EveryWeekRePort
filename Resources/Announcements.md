@@ -12,11 +12,20 @@ public class Announcement implements Serializable {
     private String announcementId;
 
     @Field
+    private String associationId;
+
+    @Field
     private String date;
     
 
     @Field
     private String title;
+
+    @Filed
+    private String content;
+
+
+}
 
 ```
 
@@ -29,4 +38,3 @@ public class Announcement implements Serializable {
 | date    | String   |                  |      |
 | content | String   |                  | 内容 |
 | title   | String   |                  |      |
-|||||

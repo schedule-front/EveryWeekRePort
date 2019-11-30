@@ -13,6 +13,10 @@ public class Association implements Serializable {
     @Field
     private String name;
 
+
+    @Field
+    private String presidentId;
+
     @Field
     private Map<String,String> duitesId; // userId -> duityId
 
@@ -24,6 +28,15 @@ public class Association implements Serializable {
 
     @Field
     public Set<String> accounts;
+
+    @Field
+    private String logoUrl;
+
+    @Field
+    private Date establishedTime;
+
+    @Field
+    private Map<String,Double> stars;
 }
 ```
 

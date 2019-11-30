@@ -22,5 +22,11 @@ public class Activity {
 
     @Field
     private String associationId;
+
+    @Field
+    private Integer numPeople;
+    
+    @Field
+    private String location;
 }
 ```
