@@ -122,17 +122,29 @@
 
         
 
-   10. 活动审批页面
+   10. 活动审核表单
 
-       ![ActivityReview](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week4/img/ApplyB.png)
+       ![ActList](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week4/img/ActivityList.png)
 
        * 该页面仅有管理员可见
 
-       * 该页面所有信息均无法修改
+       * 该页面包含了活动的基本信息
 
-       * 管理员可以选择同意或拒绝未被审批过的申请
+       * 活动的审批状态颜色直观形象
 
          
+
+   10. 活动审批详情页面
+
+      ![ActivityReview](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week4/img/ApplyB.png)
+
+      * 该页面仅有管理员可见
+
+      * 该页面所有信息均无法修改
+
+      * 管理员可以选择同意或拒绝未被审批过的申请
+
+        
 
    11. 通知详情页面
 
@@ -151,15 +163,15 @@
          
 
    13. 不同权限用户的页面
-
+   
        ![A](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week4/img/RoleA.png)
-
+   
        * 普通学生页面
-
+   
        ![B](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week4/img/RoleB.png)
-
+   
        * 社长页面
-
+   
        ![C](https://raw.githubusercontent.com/schedule-front/EveryWeekRePort/master/week4/img/RoleC.png)
-
+   
        * 管理员页面
